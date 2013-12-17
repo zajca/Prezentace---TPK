@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>GMS sítě</title>
+
+		<meta name="description" content="GSM sítě">
+		<meta name="author" content="Martin Zajíc (zajca)">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/presentation.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <style>
+            .left{
+                float: left;
+            }
+            .right{
+                float: right;
+            }
+        </style>
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>GSM sítě</h1>
+					<p>
+						<small><a href="http://about.me/zajca">Martin Zajíc</a> / <a href="http://twitter.com/zajca">@zajca</a></small>
+					</p>
+				</section>
+                <section>
+                    <h2>Obsah</h2>
+
+                    <p class="fragment">Historie</p>
+                    <p class="fragment">Současnost</p>
+                    <p class="fragment">Struktura sítě</p>
+                    <p class="fragment">Přístupové metody</p>
+                    <p class="fragment">Rádiové rozhraní</p>
+                    <p class="fragment">Zpracování signálu</p>
+
+                </section>
+
+				<section>
+					<h2>Historie</h2>
+				</section>
+
+                <section>
+                    <p class="fragment">GSM - Globální Systém pro Mobilní komunikaci (Groupe Spécial Mobile)</p>
+                    <p class="fragment">1982 založena skupina GSM</p>
+                    <p class="fragment">Předpokládalo se, že mobilní telefon bude používat pouze malý zlomek obyvatelstva</p>
+                    <p class="fragment">Původně velké nepřenosné telefony používané v automobilech</p>
+                    <p class="fragment">1990 vyšla první specifikace</p>
+                    <p class="fragment">2G síť - možnost volat posílat SMS, datové přenosy (CSD) a jiné doplňkové služby</p>
+                    <p class="fragment">1997 GPRS standard pro levnější datové přenosy pomocí datových paketů</p>
+                    <p class="fragment">1999 vzniká standard UMTS</p>
+                </section>
+                <section>
+                    <h2>Současnost</h2>
+                </section>
+                <section>
+                    <p class="fragment">5 miliar účastníků ve 200 zemích</p>
+                    <p class="fragment">GSM vyvíjeno organizací 3GPP</p>
+                    <p class="fragment">Postupně nahrazováno technologiemy 3. a 4. generace</p>
+
+                </section>
+                <section>
+                    <h2>Struktura sítě</h2>
+                    <img src="./img/struktura.png" />
+                </section>
+                    <section>
+                        <h2>Mobilní uživatelské stanice - MS</h2>
+                        <small>(Mobile Station)</small>
+                        <div style="margin-left: 350px;">
+                            <ul>
+                                <li>Mobilní telefon je v podstatě transciever (vysílač/přijímač) komunikující se základnovou stanicí BTS.</li>
+                                <li>Mobilní stanice je jednoznačně identifikována pomocí čísla IMEI (International Mobile Equipment Identity), uloženého v její paměti.</li>
+                                <li>Sám účastník je identifikován pomocí SIM karty (Subscriber Identification Module).</li>
+                        </div>
+                        <div class="absolute-element" style="position: absolute; width: 62px; height: 308px; z-index: 4; left: 49px; top: 215px;">
+                            <img src="./img/MT.png" style="width: 62px; height: 308px; max-height: none; max-width: none;">
+                            <br>
+                        </div>
+                    </section>
+                <section>
+                    <h2>Subsystém základnových stanic - BSS</h2>
+                    <small>(Base Station Subsystem)</small>
+                    <div style="margin-left: 350px;">
+                        <ul>
+                        <li class="fragment">Jedná se o subsystém, se kterým prostřednictvím rádiového rozhraní komunikují jednotlivé mobilní stanice MS.</li>
+                        <li class="fragment">Není možná komunikace jednotlivým mobilních stanic přímo mezi sebou.</li>
+</ul>
+                    </div>
+                    <div class="absolute-element" style="position: absolute; width: 261px; height: 368px; z-index: 4; left: 49px; top: 215px;">
+                        <img src="./img/BSC.png" style="width: 261px; height: 368px; max-height: none; max-width: none;">
+                        <br>
+                    </div>
+                </section>
+                <section>
+                    <h2>Síťový spojovací subsystém - NSS</h2>
+                    <small>(Network Switching subsystem)</small>
+                    <div style="margin-left: 380px;">
+                        <ul>
+                        <li class="fragment">systém mobilních (radiotelefonních ústředen)</li>
+                        <li class="fragment">oproti klasickým ústřednám rozšířeny o další funkce jako: určování polohy, handover, přidělování kanálů apod.</li>
+</ul>
+                    </div>
+                    <div class="absolute-element" style="position: absolute; width: 299px; height: 342px; z-index: 4; left: 49px; top: 215px;">
+                        <img src="./img/NSS.png" style="width: 299px; height: 342px; max-height: none; max-width: none;">
+                        <br>
+                    </div>
+                </section>
+                <section>
+                    <h2>Operační a podpůrný subsystém - OSS</h2>
+                    <small>(Operational and Support Subsystem)</small>
+                    <div style="margin-left: 350px;">
+                        <ul>
+                        <li class="fragment">Zajišťuje řádnou činnost a údržbu celé sítě GSM.</li>
+                        <li class="fragment">monitoring, diagnostika, opravy poruch systému, administrativní podpora a mnoho dalších úkonů</li>
+</ul>
+                    </div>
+                    <div class="absolute-element" style="position: absolute; width: 126px; height: 70px; z-index: 4; left: 120px; top: 370px;">
+                        <img src="./img/OSS.png" style="width: 126px; height: 70px; max-height: none; max-width: none;">
+                        <br>
+                    </div>
+                </section>
+                <section>
+                    <h2>Přístupové metody</h2>
+                </section>
+                <section>
+                    <h3>FDMA</h3>
+                    <small>(Frequency Division Multiple Access)</small>
+                    <p>Pásmo rozdělíme na subpásma, kterým jsou dále přiřazeny jednotlivé kanály. Jednotliví účastníci tak komunikují na různých kmitočtech.
+                        Tento princip je využíván například u analogových celulárních systémů pro mobilní komunikaci.</p>
+                    <embed src="./img/fdma.swf" quality="high" bgcolor="#FFFFFF" width="421" height="205" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" style="display: block !important; margin:0 auto;">
+
+                </section>
+                <section>
+                    <h3>TDMA</h3>
+                    <small>(Time Division Multiple Access)</small>
+                    <p>Pouze v digitálních systémech<p>
+                    <p>V daném frekvenčním pásmu jsou vytvořeny časové úseky (intervaly, sloty) a ty jsou poté přidělovány jednotlivým uživatelům.</p>
+                    <p>Skupina takovýchto intervalů příslušejících různým účastníkům se nazývá rámec.</p>
+                    <embed src="./img/tdma1.swf" quality="high" bgcolor="#FFFFFF" width="421" height="205" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" style="display: block !important; margin:0 auto;">
+
+                </section>
+                <!--<section>
+                    <h3>CDMA</h3>
+                    <small>(Code division Multiple Access)</small>
+                    <p>Datová posloupnost každého komunikačního kanálu je na vysílací straně podrobena procesu dalšího kódování podle speciálního, kódovacího předpisu.</p>
+                    <p>Dojde k tzv. rozprostření úzkopásmového signálu do širokého kanálu, společného všem uživatelům.</p>
+                    <p>Signály všech účastníků se tedy přenášejí ve stejném frekvenčním pásmu a bez nutnosti časového oddělení.</p>
+                    <p>Na přijímací straně probíhá naopak dekódování a jednotlivé kanály jsou odděleny na základě dekódovacího předpisu.</p>
+                    <embed src="./img/cdma.swf" quality="high" bgcolor="#FFFFFF" width="421" height="205" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" style="display: block !important; margin:0 auto;">
+
+                </section>-->
+                <section>
+                    <h2>Rádiové rozhraní</h2>
+                </section>
+                <section>
+                    <ul>
+                        <li>Dvě rádiová pásma o šířce 2x25 MHz</li>
+                        <li>Každá dvojice uplink/downlink číslem rádiového frekvenčního kanálu ARFCN <small>(Absolute Radio Frequency Channel Number)</small></li>
+                        <li>GSM 900</li>
+                        <ul>
+                            <li><strong>uplink: </strong>890-915</li>
+                            <li><strong>downlink: </strong>935-960 MHz</li>
+                            <li>Plně duplexní provoz ve formě frekvenčního duplexu FDD s duplexním odstupem 45 MHz</li>
+                            <li>Nosné vlny mají vzájemný odstup 200 kHz (celkem 125 v pásmu 25MHz)</li>
+                        </ul>
+                        <li>GSM 1800</li>
+                        <ul>
+                            <li>buňky malých rozměrů</li>
+                            <li><strong>uplink: </strong>1710-1785 MHz</li>
+                            <li><strong>downlink: </strong>1805-1880 MHz</li>
+                            <li>375 rádiových kanálů</li>
+                            <li>Šířka pásma 75 MHz</li>
+                            <li>duplexní odstup 95 MHz</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>GSM 1900</li>
+                        <ul>
+                            <li><strong>uplink: </strong>1850-1910 MHz</li>
+                            <li><strong>downlink: </strong>1930-1990 MHz</li>
+                            <li>Šířka pásma 60 MHz</li>
+                            <li>duplexní odstup 80 MHz</li>
+                            <li>300 rádiových a 2400 uživatelských kanálů</li>
+                        </ul>
+                        <li>E-GSM</li>
+                        <ul>
+                            <li>rozšírené pásmo</li>
+                            <li><strong>uplink: </strong>880-915 MHz</li>
+                            <li><strong>downlink: </strong>925-960 MHz</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Zpracování signálu</h2>
+                    <embed src="./img/zpracovani.swf" quality="high" bgcolor="#FFFFFF" width="600" height="600" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" style="display: block !important; margin:0 auto;">
+                </section>
+				<section data-state="blackout">
+					<h1>KONEC</h1>
+                    <h2>Děkuji za pozornost</h2>
+					<h3>By Martin Zajíc / @zajca</h3>
+				</section>
+                <section data-state="blackout">
+                    <h1>Literatura</h1>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: 'serif', // available themes are in /css/theme
+				transition: 'zoom', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

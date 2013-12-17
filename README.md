@@ -1,4 +1,1 @@
-Prezentace---TPK
-================
-
-Prezentace - TPK
+#AngularJS Good practices talk
