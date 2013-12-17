@@ -1,1 +1,1 @@
-#AngularJS Good practices talk
+#PREZENTACE GSM TPK
